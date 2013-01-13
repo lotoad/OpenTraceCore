@@ -38,6 +38,7 @@ public class User {
         return new Md5PasswordEncoder().encodePassword(password, SALT);
     }
 
+	/*
     @RelatedToVia(type = RATED)
     @Fetch Iterable<Rating> ratings;
 
@@ -73,7 +74,7 @@ public class User {
     public Set<User> getFriends() {
         return friends;
     }
-
+*/
     public Roles[] getRole() {
         return roles;
     }
@@ -86,7 +87,7 @@ public class User {
     public String getPassword() {
         return password;
     }
-
+/*
 	public String getInfo() {
 		return info;
 	}
@@ -106,7 +107,7 @@ public class User {
     public boolean isFriend(User other) {
         return other!=null && getFriends().contains(other);
     }
-
+*/
     public enum Roles implements GrantedAuthority {
         ROLE_USER, ROLE_ADMIN;
 
